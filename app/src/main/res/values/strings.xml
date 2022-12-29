@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Lamborghini</string>
+    <string name="app_btn_leftClick">L Click</string>
+    <string name="app_btn_preferences">Preferences</string>
+    <string name="app_input_hostIp">Host Address</string>
+    <string name="app_input_hostPort">Host Port</string>
+    <string name="app_input_code">Code</string>
+    <string name="app_btn_save">Save</string>
+    <string name="app_text_status">Status</string>
+    <string name="app_btn_connect">Connect</string>
+    <string name="app_btn_close">Close</string>
+</resources>
