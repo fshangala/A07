@@ -1,0 +1,24 @@
+on:
+  push:
+    tags:
+      - "*"
+
+jobs:
+  Gradle:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Chekcout code
+        uses: actions/checkout@v2
+      - name: Setup jdk
+        uses: actions/setup-java@v1
+        with:
+          java-version: 11
+      - name: Make gradle executable
+        run: chmod +x ./gradlew
+      - name: Build release APK
+        run: ./gradlew assembleRelease
+      - name: Releasing using hub
+        uses: kyze8439690/action-release-releaseapk@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+          APP_FOLDER: app
